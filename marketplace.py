@@ -9,7 +9,7 @@ class Marketplace:
         # register user
         username = username.lower()
         success = self.db.add_user(username)
-        return "Success" if success else "Error - user already existing"
+        return "Fail" if success else "Error - user already existing"
 
     def create_listing(self, username, title, description, price, category):
         # create listing
