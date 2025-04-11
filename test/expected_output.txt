@@ -1,0 +1,19 @@
+Success
+100001
+Phone model 8|Black color, brand new|1000|[TIME]|Electronics|user1
+100002
+Success
+Error - user already existing
+100003
+T-shirt|White color|20|[TIME]|Sports|user2
+Error - category not found
+Black shoes|Training shoes|100|[TIME]|Sports|user1
+T-shirt|White color|20|[TIME]|Sports|user2
+Sports
+Error - listing owner mismatch
+Success
+Sports
+Success
+Electronics
+Error - unknown user
+退出 CloudShop CLI

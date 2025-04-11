@@ -1,4 +1,5 @@
 import datetime
+from time import sleep
 
 class Database:
     def __init__(self):
@@ -22,6 +23,7 @@ class Database:
         
         listing_id = self.next_listing_id
         self.next_listing_id += 1
+        sleep(0.01)
         created_at = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 

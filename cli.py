@@ -1,14 +1,16 @@
 import shlex
 from marketplace import Marketplace
+import sys
 
 def main():
     market = Marketplace()
 
-    print("# CloudShop CLI 已啟動，請輸入指令，輸入 'EXIT' 離開")
+    print("# CloudShop CLI 已啟動，請輸入指令，輸入 'EXIT' 離開", file=sys.stderr)
 
     while True:
         try:
-            command = input("# ").strip()
+            print("# ", end="", file=sys.stderr)  # 印提示到 stderr，避免干擾測試
+            command = input("").strip()
             if not command:
                 continue
 
@@ -70,7 +72,8 @@ def main():
 
             else:
                 print("Error - 未知指令，請重新輸入")
-
+        except EOFError:
+            break  # EOF 結束時自動跳出 while 迴圈
         except Exception as e:
             print(f"Error - {e}")
 
